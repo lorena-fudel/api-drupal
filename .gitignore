@@ -1,10 +1,13 @@
-node_modules
+# Datos de base de datos y archivos temporales de Docker
+drupal-data/db_data/
+drupal-data/sites/default/files/
+drupal-data/core/
+drupal-data/vendor/
+
+# Archivos de Node
+node_modules/
 .env
-npm-debug.log*
-# Ignorar todos los archivos de logs
-*.log
-logs/
-docker/logs/
-# Si usas frameworks específicos
-/storage/logs/
-/var/log/
+
+# Archivos de control de sistema
+.DS_Store
+Thumbs.db

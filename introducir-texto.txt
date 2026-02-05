@@ -1,12 +1,2 @@
-¡Hola Mundo desde un archivo externo!
-NUEVO HOLA MUNDO
-
-LALA
-
-finalizar dia prácticas IAC.
-
-este texo procede de mi API . LORENA - DEW 
-
-
-
-NUEVO LOG SE VE EN DRUPAL
+cambio en el formato, y nuevo linea de texto 05/02/2026 13:02
+Nueva linea prueba

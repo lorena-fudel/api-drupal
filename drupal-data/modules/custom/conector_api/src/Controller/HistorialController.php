@@ -31,14 +31,19 @@ class HistorialController extends ControllerBase {
 
       // 3. Devolvemos el contenido envuelto en etiquetas para que no se pierda el formato
       return [
-        '#markup' => '
-          <div class="api-output">
-            <h2>Contenido del Log (hola.txt)</h2>
-            <pre style="background: #f4f4f4; padding: 15px; border: 1px solid #ccc;">' . $contenido . '</pre>
-            <br>
-            <a href="/api/entrar" class="button">🔄 Actualizar y añadir nueva línea</a>
-          </div>',
-      ];
+                '#markup' => '
+                  <div class="api-output">
+                    <h2>📟 Terminal de Logs del Sistema</h2>
+                    <pre>' . $contenido . '</pre>
+                    <a href="/api/entrar" class="button">Ejecutar nueva entrada</a>
+                  </div>',
+                '#attached' => [
+                  'library' => [
+                    'conector_api/estilos-log', // Nombre del módulo / nombre de la librería
+                  ],
+                ],
+                '#cache' => ['max-age' => 0],
+              ];
 
     } catch (\Exception $e) {
       return [

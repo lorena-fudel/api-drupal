@@ -1,62 +1,13 @@
-txt borrado
-
-Entrada (2/5/2026, 11:42:49 AM): ¡Hola Mundo desde un archivo externo!
-NUEVO HOLA MUNDO
-
-LALA
-
-finalizar dia prácticas IAC.
-
-este texo procede de mi API . LORENA - DEW
-Entrada (2/5/2026, 11:43:06 AM): ¡Hola Mundo desde un archivo externo!
-NUEVO HOLA MUNDO
-
-LALA
-
-finalizar dia prácticas IAC.
-
-este texo procede de mi API . LORENA - DEW
-Entrada (2/5/2026, 11:45:27 AM): ¡Hola Mundo desde un archivo externo!
-NUEVO HOLA MUNDO
-
-LALA
-
-finalizar dia prácticas IAC.
-
-este texo procede de mi API . LORENA - DEW
-Entrada (2/5/2026, 11:46:09 AM): ¡Hola Mundo desde un archivo externo!
-NUEVO HOLA MUNDO
-
-LALA
-
-finalizar dia prácticas IAC.
-
-este texo procede de mi API . LORENA - DEW 
-
-
-
-NUEVO LOG SE VE EN DRUPAL
-Entrada (2/5/2026, 11:46:41 AM): ¡Hola Mundo desde un archivo externo!
-NUEVO HOLA MUNDO
-
-LALA
-
-finalizar dia prácticas IAC.
-
-este texo procede de mi API . LORENA - DEW 
-
-
-
-NUEVO LOG SE VE EN DRUPAL
-Entrada (2/5/2026, 11:48:17 AM): ¡Hola Mundo desde un archivo externo!
-NUEVO HOLA MUNDO
-
-LALA
-
-finalizar dia prácticas IAC.
-
-este texo procede de mi API . LORENA - DEW 
-
-
-
-NUEVO LOG SE VE EN DRUPAL
+todo borradoEntrada (2/5/2026, 1:05:02 PM): cambio en el formato, y nuevo linea de texto 05/02/2026 13:02
+Entrada (2/5/2026, 1:19:37 PM): cambio en el formato, y nuevo linea de texto 05/02/2026 13:02
+Nueva linea prueba
+Entrada (2/5/2026, 1:20:06 PM): cambio en el formato, y nuevo linea de texto 05/02/2026 13:02
+Nueva linea prueba
+Entrada (2/5/2026, 1:32:59 PM): cambio en el formato, y nuevo linea de texto 05/02/2026 13:02
+Nueva linea prueba
+Entrada (2/5/2026, 1:53:18 PM): cambio en el formato, y nuevo linea de texto 05/02/2026 13:02
+Nueva linea prueba
+Entrada (2/5/2026, 1:56:09 PM): cambio en el formato, y nuevo linea de texto 05/02/2026 13:02
+Nueva linea prueba
+Entrada (2/5/2026, 1:58:05 PM): cambio en el formato, y nuevo linea de texto 05/02/2026 13:02
+Nueva linea prueba
