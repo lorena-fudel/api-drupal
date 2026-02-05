@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env  # Docker inyectará automáticamente las variables de este archivo
+    volumes:
+      - .:/usr/src/app
+    command: npm run dev  # <------ Esto sobreescribe el CMD del Dockerfile
