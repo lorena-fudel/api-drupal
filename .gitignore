@@ -1,12 +1,10 @@
 node_modules
 .env
-
+npm-debug.log*
 # Ignorar todos los archivos de logs
 *.log
 logs/
 docker/logs/
-
 # Si usas frameworks específicos
 /storage/logs/
 /var/log/
-
