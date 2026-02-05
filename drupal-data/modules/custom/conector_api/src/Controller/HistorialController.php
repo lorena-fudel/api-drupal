@@ -1,0 +1,49 @@
+<?php
+namespace Drupal\conector_api\Controller;
+
+use Drupal\Core\Controller\ControllerBase;
+use GuzzleHttp\Exception\RequestException;
+
+class HistorialController extends ControllerBase {
+
+  public function mostrar() {
+    // 1. Recuperamos el token de la sesión
+    $token = \Drupal::service('session')->get('jwt_token');
+
+    if (!$token) {
+      return [
+        '#markup' => '<div class="messages messages--error">Error: No hay una sesión activa. Por favor, <a href="/api/entrar">logueate de nuevo</a>.</div>',
+      ];
+    }
+
+    $client = \Drupal::httpClient();
+
+    try {
+      // 2. Llamamos a la API para leer el historial
+      $response = $client->get('http://api:3000/files/ver-historial', [
+        'headers' => [
+          'Authorization' => 'Bearer ' . $token,
+          'Accept' => 'text/plain',
+        ],
+      ]);
+
+      $contenido = (string) $response->getBody();
+
+      // 3. Devolvemos el contenido envuelto en etiquetas para que no se pierda el formato
+      return [
+        '#markup' => '
+          <div class="api-output">
+            <h2>Contenido del Log (hola.txt)</h2>
+            <pre style="background: #f4f4f4; padding: 15px; border: 1px solid #ccc;">' . $contenido . '</pre>
+            <br>
+            <a href="/api/entrar" class="button">🔄 Actualizar y añadir nueva línea</a>
+          </div>',
+      ];
+
+    } catch (\Exception $e) {
+      return [
+        '#markup' => '<div class="messages messages--error">Error al conectar con la API: ' . $e->getMessage() . '</div>',
+      ];
+    }
+  }
+}

@@ -1,2 +1,12 @@
 node_modules
 .env
+
+# Ignorar todos los archivos de logs
+*.log
+logs/
+docker/logs/
+
+# Si usas frameworks específicos
+/storage/logs/
+/var/log/
+

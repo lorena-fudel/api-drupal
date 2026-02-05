@@ -1,1 +1,62 @@
 txt borrado
+
+Entrada (2/5/2026, 11:42:49 AM): ¡Hola Mundo desde un archivo externo!
+NUEVO HOLA MUNDO
+
+LALA
+
+finalizar dia prácticas IAC.
+
+este texo procede de mi API . LORENA - DEW
+Entrada (2/5/2026, 11:43:06 AM): ¡Hola Mundo desde un archivo externo!
+NUEVO HOLA MUNDO
+
+LALA
+
+finalizar dia prácticas IAC.
+
+este texo procede de mi API . LORENA - DEW
+Entrada (2/5/2026, 11:45:27 AM): ¡Hola Mundo desde un archivo externo!
+NUEVO HOLA MUNDO
+
+LALA
+
+finalizar dia prácticas IAC.
+
+este texo procede de mi API . LORENA - DEW
+Entrada (2/5/2026, 11:46:09 AM): ¡Hola Mundo desde un archivo externo!
+NUEVO HOLA MUNDO
+
+LALA
+
+finalizar dia prácticas IAC.
+
+este texo procede de mi API . LORENA - DEW 
+
+
+
+NUEVO LOG SE VE EN DRUPAL
+Entrada (2/5/2026, 11:46:41 AM): ¡Hola Mundo desde un archivo externo!
+NUEVO HOLA MUNDO
+
+LALA
+
+finalizar dia prácticas IAC.
+
+este texo procede de mi API . LORENA - DEW 
+
+
+
+NUEVO LOG SE VE EN DRUPAL
+Entrada (2/5/2026, 11:48:17 AM): ¡Hola Mundo desde un archivo externo!
+NUEVO HOLA MUNDO
+
+LALA
+
+finalizar dia prácticas IAC.
+
+este texo procede de mi API . LORENA - DEW 
+
+
+
+NUEVO LOG SE VE EN DRUPAL

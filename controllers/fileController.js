@@ -2,16 +2,19 @@ const fs = require('fs');
 
 exports.handleFileAppend = (req, res) => {
     try {
+        // LEER SIEMPRE EL ARCHIVO AQUÍ (dentro de la función)
         const mensajeBase = fs.readFileSync("introducir-texto.txt", "utf8").trim();
-        const nuevaLinea = `Nueva entrada: ${new Date().toLocaleString()} - ${mensajeBase}\n`;
         
+        const nuevaLinea = `Entrada (${new Date().toLocaleString()}): ${mensajeBase}\n`;
+        
+        // Escribir en el log
         fs.appendFileSync("hola.txt", nuevaLinea);
-        const contenidoCompleto = fs.readFileSync("hola.txt", "utf8");
         
-        res.header("Content-Type", "text/plain");
-        res.send(contenidoCompleto);
+        // Leer el resultado para mostrarlo
+        const contenidoLog = fs.readFileSync("hola.txt", "utf8");
+        res.send(contenidoLog);
     } catch (err) {
-        res.status(500).send("Error procesando archivos externos.");
+        res.status(500).send("Error: Asegúrate de que introducir-texto.txt existe y tiene contenido.");
     }
 };
 

@@ -1,0 +1,5 @@
+name: 'Conector API Node.js'
+type: module
+description: 'Módulo para conectar Drupal con nuestra API modular de Node.js.'
+package: Custom
+core_version_requirement: ^9 || ^10
