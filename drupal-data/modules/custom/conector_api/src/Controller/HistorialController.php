@@ -52,4 +52,42 @@ class HistorialController extends ControllerBase {
       ];
     }
   }
+
+
+    
+    public function saludar() {
+    $token = \Drupal::service('session')->get('mi_token_api');
+
+    if (!$token) {
+      \Drupal::messenger()->addWarning('Debes loguearte primero.');
+      return new \Symfony\Component\HttpFoundation\RedirectResponse('/api/entrar');
+    }
+
+    $client = \Drupal::httpClient();
+    try {
+      $response = $client->get('http://api:3000/files/saludar', [
+        'headers' => ['Authorization' => 'Bearer ' . $token]
+      ]);
+
+      $data = json_decode($response->getBody());
+      
+      // Construimos un diseño sencillo con la foto y la hora
+      $html = "
+        <div style='text-align: center; border: 1px solid #ccc; padding: 20px; border-radius: 10px;'>
+          <h1>" . $data->mensaje . "</h1>
+          <p style='font-size: 1.5em; color: #007bff;'>🕒 Hora del servidor API: <strong>" . $data->hora . "</strong></p>
+          <img src='" . $data->foto . "' alt='Foto API' style='max-width: 100%; height: auto; border-radius: 5px; margin-top: 15px;'>
+        </div>
+      ";
+
+      return [
+        '#markup' => $html,
+        '#cache' => ['max-age' => 0], // Importante para que la hora se actualice al refrescar
+      ];
+    } catch (\Exception $e) {
+      return ['#markup' => 'No se pudo conectar: ' . $e->getMessage()];
+    }
+  }
+
+
 }

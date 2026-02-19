@@ -11,4 +11,8 @@ router.get('/hola', verifyToken, fileController.handleFileAppend);
 // URL en Postman: GET http://localhost:3000/files/ver-historial
 router.get('/ver-historial', verifyToken, fileController.getHistory);
 
+//el hola mundo
+router.get('/saludar', verifyToken, fileController.getSaludar);
+
 module.exports = router;
+

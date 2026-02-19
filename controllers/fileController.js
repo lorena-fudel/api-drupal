@@ -24,3 +24,18 @@ exports.getHistory = (req, res) => {
 exports.handleFileAppend = (req, res) => {
     res.send("La sincronización ahora es automática al guardar el archivo introducir-texto.txt");
 };
+
+exports.getSaludar = (req, res) => {
+    const horaActual = new Date().toLocaleTimeString('es-ES', { 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit' 
+    });
+
+    res.json({ 
+        mensaje: "¡Hola Mundo desde la API!",
+        hora: horaActual,
+        // Imagen aleatoria de tecnología
+        foto: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80" 
+    });
+};

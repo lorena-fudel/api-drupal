@@ -13,3 +13,11 @@ conector_api.historial:
     _title: 'Historial de Logs'
   requirements:
     _permission: 'access content'
+
+conector_api.saludo:
+  path: '/api/saludar'
+  defaults:
+    _controller: '\Drupal\conector_api\Controller\HistorialController::saludar'
+    _title: 'Página de Saludo'
+  requirements:
+    _permission: 'access content'

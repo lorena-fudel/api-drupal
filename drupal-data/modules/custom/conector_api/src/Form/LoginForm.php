@@ -52,7 +52,7 @@ class LoginForm extends FormBase {
       }
     } catch (\Exception $e) {
   // Esto te mostrará si es un problema de conexión o un error 401/500 de la API
-  \Drupal::messenger()->addError('Error técnico: ' . $e->getMessage());
+  \Drupal::messenger()->addError('Error técnico --- : ' . $e->getMessage());
 }
   }
 }
