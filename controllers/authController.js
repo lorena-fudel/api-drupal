@@ -1,25 +1,17 @@
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = process.env.JWT_SECRET;
 
 exports.login = (req, res) => {
-    const user = { 
-        id: 1, 
-        name: "Super-admin", 
-        entities: ["Sede Central", "Soporte Técnico"] 
-    };
-    const token = jwt.sign({ user }, SECRET_KEY, { expiresIn: '1h' });
-    res.json({ token });
-};
+    const { username, password } = req.body;
 
-exports.getProfiles = (req, res) => {
-    // Formato exacto según la documentación aportada 
-    res.json({
-        myprofiles: [
-            {
-                id: req.userData.id,
-                name: req.userData.name,
-                entities: req.userData.entities // Array de entidades 
-            }
-        ]
-    });
+    // Credenciales de prueba
+    if (username === 'admin' && password === '1234') {
+        const user = { id: 1, name: "Admin-Drupal" };
+        
+        // Usamos la clave del .env
+        const token = jwt.sign({ user }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        
+        return res.json({ token });
+    }
+
+    return res.status(401).json({ message: "Credenciales incorrectas" });
 };

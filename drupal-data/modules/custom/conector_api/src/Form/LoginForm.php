@@ -28,31 +28,31 @@ class LoginForm extends FormBase {
     return $form;
   }
 
+    // En src/Form/LoginForm.php
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $client = \Drupal::httpClient();
     
     try {
-      // 1. Obtener el Token
-      $responseAuth = $client->get('http://api:3000/auth/login');
-      $data = json_decode($responseAuth->getBody());
-      $token = $data->token;
-      
-      // Guardar token en sesión
-      \Drupal::service('session')->set('jwt_token', $token);
-
-      // 2. ¡PASO CLAVE!: Llamar a la ruta que ESCRIBE en hola.txt
-      // Usamos el token que acabamos de recibir
-      $client->get('http://api:3000/files/hola', [
-        'headers' => ['Authorization' => 'Bearer ' . $token]
+      // 1. Solicitamos el token a la ruta /auth/login de tu app.js
+      $response = $client->post('http://api:3000/auth/login', [
+        'json' => [
+          'username' => $form_state->getValue('usuario'),
+          'password' => $form_state->getValue('password'),
+        ],
       ]);
 
-      \Drupal::messenger()->addStatus('Login correcto y archivo actualizado.');
-      
-      // 3. Redirigir al historial donde ya se verá el cambio
-      $form_state->setRedirect('conector_api.historial');
+      $data = json_decode($response->getBody());
 
+      if (isset($data->token)) {
+        // 2. Guardamos el token en la sesión de Drupal
+        \Drupal::service('session')->set('mi_token_api', $data->token);
+        
+        \Drupal::messenger()->addStatus('Autenticación exitosa con la API.  yess');
+        $form_state->setRedirect('conector_api.historial');
+      }
     } catch (\Exception $e) {
-      \Drupal::messenger()->addError('Error de comunicación con la API.');
-    }
+  // Esto te mostrará si es un problema de conexión o un error 401/500 de la API
+  \Drupal::messenger()->addError('Error técnico: ' . $e->getMessage());
+}
   }
 }
