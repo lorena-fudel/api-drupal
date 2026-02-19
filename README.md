@@ -1,5 +1,7 @@
-¡SEGUIMOS!
+proyecto con:
 
-EN ESTE PROCESO AÑADIRÉ DRUPAL EN EL PROYECTO.
+drupal + js para frontend 
 
-¡GO!
+js para backend
+
+trabajo con docker-compose
